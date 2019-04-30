@@ -1,38 +1,43 @@
 {
-  "name": "ngx-translate-zombies",
-  "displayName": "ngx-translate-zombies",
-  "description": "Detects unused ngx-translate keys",
-  "version": "0.0.1",
-  "publisher": "seveseves",
-  "engines": {
-    "vscode": "^1.19.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:ngxtz.check"
-  ],
-  "main": "./out/extension",
-  "contributes": {
-    "commands": [
-      {
-        "command": "ngxtz.check",
-        "title": "ngxtz: find translation zombies in this file"
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
-  },
-  "devDependencies": {
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.6",
-    "@types/node": "^7.0.43",
-    "@types/mocha": "^2.2.42"
-  }
+	"name": "ngx-translate-zombies",
+	"displayName": "ngx-translate-zombies",
+	"description": "Detects unused ngx-translate keys",
+	"version": "0.0.1",
+	"publisher": "benthieu:test",
+	"engines": {
+		"vscode": "^1.19.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:ngxtz.check"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ngxtz.check",
+				"title": "ngxtz: find translation zombies in this file"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "94881964-72d3-4f02-97e2-2b667b545732",
+		"publisherDisplayName": "Severin",
+		"publisherId": "413cd7bf-bc64-46db-b272-47e4f42016f1"
+	}
 }

@@ -32,14 +32,13 @@ export function activate(context: vscode.ExtensionContext) {
 
           let unzombified = { ...json };
           for (let index = 0; index < zombies.length; index++) {
+            // we are working with strings instead of objects, no need to reduce the object keys
             const zombie = zombies[index];
-            const zombieKeys = zombie.split('.');
-            const prop = zombieKeys.pop();
-            const parent = zombieKeys.reduce((obj, key) => obj[key], unzombified);
-            delete parent[prop];
+            delete unzombified[zombie];
           }
           const content = JSON.stringify(unzombified, null, 2);
-          vscode.workspace.openTextDocument({ content })
+          // added language for readability
+          vscode.workspace.openTextDocument({ content: content, language: 'json' })
             .then(
               doc => {
                 const fileName = langDoc.fileName.replace(vscode.workspace.rootPath, '').substring(1);
